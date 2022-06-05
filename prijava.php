@@ -11,6 +11,7 @@
 		unset($_SESSION['aktivni_korisnik_ime']);
 		unset($_SESSION["aktivni_korisnik_tip"]);
 		unset($_SESSION["aktivni_korisnik_id"]);
+		unset($_SESSION['aktivni_korisnik_tip_naziv']);
 		session_destroy();
 		header("Location:index.php");
 	}
@@ -30,6 +31,15 @@
 				$_SESSION['aktivni_korisnik_ime']=$ime." ".$prezime;
 				$_SESSION["aktivni_korisnik_id"]=$id;
 				$_SESSION['aktivni_korisnik_tip']=$tip;
+
+				$sql="SELECT naziv FROM tip_korisnika WHERE tip_korisnika_id=$tip";
+				$rs1=izvrsiUpit($veza,$sql);
+				if(mysqli_num_rows($rs1)==0)$greska="Nepoznati tip korisnika!";
+				else{
+					list($tip_korisnika_naziv)=mysqli_fetch_array($rs1);
+					$_SESSION['aktivni_korisnik_tip_naziv']=$tip_korisnika_naziv;
+				}
+
 				header("Location:index.php");
 			}
 		}

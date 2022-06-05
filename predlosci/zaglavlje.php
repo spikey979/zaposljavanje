@@ -1,21 +1,15 @@
 <?php
-//include("baza.php");
+
 	include "../helpers.php";
 	
 	if(session_id()=="")session_start();
 
-	//$trenutna=basename($_SERVER["PHP_SELF"]);
-	//$putanja=$_SERVER['REQUEST_URI'];
-	//$aktivni_korisnik = 0;
-	//$aktivni_korisnik_tip=-1;
-	//$vel_str=5; // broj prikazanih elemenata na stranici s korisnicima
-	//$vel_str_video=20; 	// broj prikazanih elemenata na stranici s video materijalima
-
 	if(isset($_SESSION['aktivni_korisnik'])){
 		$aktivni_korisnik=$_SESSION['aktivni_korisnik'];
+		$aktivni_korisnik_id=$_SESSION["aktivni_korisnik_id"];
 		$aktivni_korisnik_ime=$_SESSION['aktivni_korisnik_ime'];
 		$aktivni_korisnik_tip=$_SESSION['aktivni_korisnik_tip'];
-		$aktivni_korisnik_id=$_SESSION["aktivni_korisnik_id"];
+		$aktivni_korisnik_tip_naziv=$_SESSION['aktivni_korisnik_tip_naziv'];
 	}
 ?>	
 <!DOCTYPE html>
@@ -43,6 +37,7 @@
 			<?php			
 				if($_SESSION['aktivni_korisnik'] != NULL){
 					echo "<span><strong>Korisnik: </strong>$aktivni_korisnik_ime</span><br/>";
+					echo "<span><strong>Tip korisnika: </strong>$aktivni_korisnik_tip_naziv</span><br/>";
 					echo "<a class='link' href='prijava.php?logout=1'>Odjava</a><br/>";
 				}
 				else{
