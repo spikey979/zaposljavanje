@@ -1,0 +1,251 @@
+kiki riki
+kiki riki
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+kiki riki
+ovo je flag 2
+kiki riki
+kiki riki
+kiki riki
+kiki riki
+ovo je flag 2
+ovo je rezultat
+mysqli_result::__set_state(array(
+   'current_field' => NULL,
+   'field_count' => NULL,
+   'lengths' => NULL,
+   'num_rows' => NULL,
+   'type' => NULL,
+))
+ovo je flag 2
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je aktivni_korisnik
+admin
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+admin
+ovo je flag 2
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+admin
+ovo je flag 2
+ovo je aktivni_korisnik
+0
+ovo je flag 2
+ovo je aktivni_korisnik
+0
+ovo je flag 2
+ovo je aktivni_korisnik
+0
+ovo je flag 2
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je aktivni_korisnik
+admin
+ovo je flag 2
+ovo je aktivni_korisnik
+admin
+ovo je sessio aktivni_korisnik
+admin
+ovo je flag 2
+ovo je aktivni_korisnik
+admin
+ovo je sessio aktivni_korisnik
+admin
+ovo je flag 1
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 1
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 0
+ovo je flag 1
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 0
+ovo je flag 2
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 0
+ovo je flag 2
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 0
+ovo je flag 2
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 0
+ovo je flag 2
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je aktivni_korisnik
+admin
+ovo je sessio aktivni_korisnik
+admin
+ovo je flag 0_5
+ovo je flag 2
+ovo je aktivni_korisnik
+admin
+ovo je sessio aktivni_korisnik
+admin
+ovo je flag 0_5
+ovo je flag 2
+ovo je aktivni_korisnik
+admin
+ovo je sessio aktivni_korisnik
+admin
+ovo je flag 0_5
+ovo je flag 1
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 0
+ovo je flag 2
+ovo je aktivni_korisnik
+0
+ovo je sessio aktivni_korisnik
+NULL
+ovo je flag 0
+ovo je flag 2
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je aktivni_korisnik
+admin
+ovo je sessio aktivni_korisnik
+admin
+ovo je flag 0_5
+ovo je flag 1
+ovo je ime
+Administrator
+ovo je prezime
+Admin
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+0
+ovo je aktivni korisnikk id
+0
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+NULL
+ovo je aktivni korisnikk id
+0
+ovo je aktivni korisnikk id
+1

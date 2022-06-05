@@ -5,7 +5,7 @@
 
 <!DOCTYPE html>
 <html>
-     <head>
+	<head>
           <title>Zaposljavanje majstora</title>
           <meta charset="utf-8" />
           <meta name="autor" content="Ana Dolenec" />
@@ -16,18 +16,18 @@
 
           <link href="adolenec.css" rel="stylesheet" type="text/css">
      </head>
+	<body>
+		<div id="zaglavlje"></div>
+		<script>
+			$(function() { $("#zaglavlje").load("/predlosci/zaglavlje.php"); });
+		</script>
 
-     <body>
-          <div id="zaglavlje"></div>
-          <script>
-               $(function() { $("#zaglavlje").load("/predlosci/zaglavlje.php"); });
-          </script>
-              
-          <p>Dobro došli u sustav za zapošljavanje majstora!<br><br>Ovdje možete ugovoriti posao sa majstorom.</p>
+		<p>Galerija slika</p>
 
-          <div id="podnozje"></div>
-          <script>
-               $(function() { $("#podnozje").load("/predlosci/podnozje.html"); });
-          </script>
-     </body>
+		<div id="podnozje"></div>
+		<script>
+			$(function() { $("#podnozje").load("/predlosci/podnozje.html"); });
+		</script>
+	</body>
 </html>
+

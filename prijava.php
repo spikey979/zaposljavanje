@@ -1,61 +1,67 @@
 <?php
-	include("zaglavlje.php");
 	include_once("baza.php");
+	include "helpers.php";
+
+	session_start();
+
 	$veza=spojiSeNaBazu();
 
-
-	if(isset($_POST["submit"])){
-		$greska = "";
-		$poruka = "";
-		$korime = $_POST["korime"];
-		if(isset($korime) && !empty($korime)
-			&& isset($_POST["lozinka"]) && !empty($_POST["lozinka"])){
-				/* kreiranje sql upita */
-				$upit = "SELECT * FROM korisnik 
-					WHERE korime='{$korime}' 
-					AND lozinka = '{$_POST["lozinka"]}'";
-				/* izvršavanje sql upita */
-				$rezultat = izvrsiUpit($veza,$upit);
-				$prijava = false;
-				/* obrada rezultata sql upita */
-				while($red = mysqli_fetch_array($rezultat)){
-					$prijava = true;
-				}
-				//npr.
-				//korisničko ime:admin
-				//lozinka:foi
-				if($prijava) {
-					$poruka = "Korisnik ulogiran";
-					setcookie("moj_kolacic", $poruka);
-					header("Location: index.php");
-					exit();
-				}
-				else {
-					$greska = "Korisničko ime i/ili lozinka se ne podudaraju!";
-				}
-		}
-		else{
-			$greska = "Korisničko ime i/ili lozinka nisu uneseni!";
-		}
+	if(isset($_GET['logout'])){
+		unset($_SESSION["aktivni_korisnik"]);
+		unset($_SESSION['aktivni_korisnik_ime']);
+		unset($_SESSION["aktivni_korisnik_tip"]);
+		unset($_SESSION["aktivni_korisnik_id"]);
+		session_destroy();
+		header("Location:index.php");
 	}
-	/* zatvaranje veze prema bazi */
+
+	$greska= "";
+	if(isset($_POST['submit'])){
+		$kor_ime=mysqli_real_escape_string($veza,$_POST['korisnicko_ime']);
+		$lozinka=mysqli_real_escape_string($veza,$_POST['lozinka']);
+
+		if(!empty($kor_ime)&&!empty($lozinka)){
+			$sql="SELECT korisnik_id, tip_korisnika_id, ime, prezime FROM korisnik WHERE korime='$kor_ime' AND lozinka='$lozinka'";
+			$rs=izvrsiUpit($veza, $sql);
+			if(mysqli_num_rows($rs)==0)$greska="Ne postoji korisnik s upisanim podacima!";
+			else{
+				list($id,$tip,$ime,$prezime)=mysqli_fetch_array($rs);
+				$_SESSION['aktivni_korisnik']=$kor_ime;
+				$_SESSION['aktivni_korisnik_ime']=$ime." ".$prezime;
+				$_SESSION["aktivni_korisnik_id"]=$id;
+				$_SESSION['aktivni_korisnik_tip']=$tip;
+				header("Location:index.php");
+			}
+		}
+		else $greska = "Molim unesite korisničko ime i lozinku";
+	}
+	
 	zatvoriVezuNaBazu($veza);
 ?>
+ <head>
+ 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<div id="zaglavlje"></div>
+<script>
+	$(function(){ $("#zaglavlje").load("/predlosci/zaglavlje.php"); });
+</script>
+
 <form id="prijava" name="prijava" method="POST" action="prijava.php" onsubmit="return validacija();">
 	<table>
 		<caption>Prijava u sustav</caption>
 		<tbody>
 			<tr>
-					<td colspan="2" style="text-align:center;">
-						<!--<label class="greska"><?php if($greska!="")echo $greska; ?></label>-->
-					</td>
+				<td colspan="2" style="text-align:center;">
+					<label class="greska"><?php if($greska!="")echo $greska; ?></label>
+				</td>
 			</tr>
 			<tr>
 				<td class="lijevi">
-					<label for="korime"><strong>Korisničko ime:</strong></label>
+					<label for="korisnicko_ime"><strong>Korisničko ime:</strong></label>
 				</td>
 				<td>
-					<input name="korime" id="korime" type="text" size="120"/>
+					<input name="korisnicko_ime" id="korisnicko_ime" type="text" size="110"/>
 				</td>
 			</tr>
 			<tr>
@@ -63,7 +69,7 @@
 					<label for="lozinka"><strong>Lozinka:</strong></label>
 				</td>
 				<td>
-					<input name="lozinka"	id="lozinka" type="password" size="120"/>
+					<input name="lozinka"	id="lozinka" type="password" size="110"/>
 				</td>
 			</tr>
 			<tr>
@@ -74,6 +80,8 @@
 		</tbody>
 	</table>
 </form>
-<?php
-   include_once("podnozje.php");
-?>
+
+<div id="podnozje"></div>
+<script>
+	$(function() { $("#podnozje").load("/predlosci/podnozje.html"); });
+</script>

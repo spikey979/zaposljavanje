@@ -1,8 +1,15 @@
 <?php
-	define("POSLUZITELJ","localhost");
+	//original
+	/* define("POSLUZITELJ","localhost");
 	define("BAZA","iwa_2021_za_projekt");
 	define("BAZA_KORISNIK","iwa_2021");
-	define("BAZA_LOZINKA","foi2021");
+	define("BAZA_LOZINKA","foi2021"); */
+
+	//dev
+	define("POSLUZITELJ","127.0.0.1");
+	define("BAZA","iwa_2021_za_projekt");
+	define("BAZA_KORISNIK","kiki");
+	define("BAZA_LOZINKA","psycho979");
 
 	function spojiSeNaBazu(){
 		$veza=mysqli_connect(POSLUZITELJ,BAZA_KORISNIK,BAZA_LOZINKA);
