@@ -2,7 +2,7 @@
  	include("predlosci/zaglavlje.php");
 	include_once("baza.php");
 
-	session_start();
+	if(session_id()=="")session_start();
 
 	$veza=spojiSeNaBazu();
 

@@ -8,8 +8,6 @@
 	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
 		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
 		exit();
-	} else if($_SESSION['aktivni_korisnik_tip'] > 0) {
-		echo "<script> location.href='obavijest.php?poruka=Nemate potrebne ovlasti za traženi pregled!'; </script>";
 	}
 
 	$veza=spojiSeNaBazu();
@@ -18,7 +16,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<title>Zapošljavanje majstora</title>
+		<title>Zapošljavanje majstora</title>
 		<meta charset="utf-8" />
 		<meta name="autor" content="Ana Dolenec" />
 		<meta name="datum" content="28.05.2022." />
@@ -32,17 +30,33 @@
 		<h1>Majstori</h1>
 			<table width = "550px" height = "50px" border="2" >
 				<tr bgcolor="#5f9ea0">
-					<td>Ime</td>
 					<td>Prezime</td>
+					<td>Ime</td>
 					<td>Zanimanje</td>
+					<td></td>
 				</tr>
 				<?php
-					$sql="SELECT ime, prezime, zanimanje_id FROM korisnik WHERE tip_korisnika_id = 1";
+					$sql="SELECT korisnik_id, ime, prezime, zanimanje_id FROM korisnik WHERE tip_korisnika_id = 1 ORDER BY prezime ASC";
 					$rs=izvrsiUpit($veza, $sql);
 					if(mysqli_num_rows($rs)==0)$greska="Nema rezultata za postavljeni upit!";
 					else{
-						while(list($ime, $prezime, $zanimanje_id)=mysqli_fetch_array($rs)) {
-							printf("<tr><td>%s</td><td>%s</td><td>%s</td</tr>",  $ime, $prezime, $zanimanje_id);
+						while(list($id, $ime, $prezime, $zanimanje_id)=mysqli_fetch_array($rs)) {
+							$zanimanje_naziv = "nepoznato";
+							$sql="SELECT naziv FROM zanimanje WHERE zanimanje_id ='$zanimanje_id'";
+							$rs_1=izvrsiUpit($veza, $sql);
+							if(mysqli_num_rows($rs_1)==0)$greska="Nema rezultata za postavljeni upit!";
+							else {
+								list($zanimanje_naziv)=mysqli_fetch_array($rs_1);
+							}
+
+							echo "<tr>
+								<td>$prezime</td>
+								<td>$ime</td>
+								<td>$zanimanje_naziv</td>
+								<td><a class='link' href='majstor.php?majstor=$id'>DETALJI</a></td>
+							";
+							echo "</tr>";
+
 						}
 					}
 				?>
