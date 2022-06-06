@@ -257,3 +257,653 @@ mysqli_result::__set_state(array(
    'num_rows' => NULL,
    'type' => NULL,
 ))
+ovo je zanimanje_id
+1
+ovo je korisnik_zanimanje_id
+NULL
+ovo je zanimanje_id
+5
+ovo je korisnik_zanimanje_id
+NULL
+ovo je zanimanje_id
+2
+ovo je korisnik_zanimanje_id
+NULL
+ovo je zanimanje_id
+3
+ovo je korisnik_zanimanje_id
+NULL
+ovo je zanimanje_id
+4
+ovo je korisnik_zanimanje_id
+NULL
+ovo je korisnik
+ovo je korisnik
+ovo je xxxxx
+ovo je korisnik
+ovo je xxxxx
+ovo je korisnik
+ovo je xxxxx
+ovo je submit
+ovo je xxxxx
+ovo je submit
+ovo je xxxxx
+ovo je korisnik
+ovo je xxxxx
+ovo je submit
+ovo je xxxxx
+ovo je korisnik
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+NULL
+ovo je POST[\'ime\']
+Jessicax
+ovo je submit
+ovo je POST[\'id\']
+NULL
+ovo je POST[\'ime\']
+Jessicax
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+NULL
+ovo je POST[\'ime\']
+Jessica
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+NULL
+ovo je POST[\'ime\']
+NULL
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessicax
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessicax
+ovo je sql
+UPDATE korisnik SET
+					ime=\'Jessicax\',
+					WHERE korisnik_id=\'36\'
+				
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessicax
+ovo je sql
+UPDATE korisnik SET
+					ime=\'Jessicax\',
+					WHERE korisnik_id=\'36\'
+				
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessicax
+ovo je sql
+UPDATE korisnik SET
+					ime=\'Jessicax\',
+					WHERE korisnik_id=\'36\'
+				
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessicax
+ovo je sql
+UPDATE korisnik SET
+					ime=\'Jessicax\',
+					WHERE korisnik_id=36
+				
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET ime=\'mirkec\' where korisnik_id=36
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+					ime=\'Jessica\'
+					WHERE korisnik_id=36
+				
+ovo je korisnik
+ovo je korisnik
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessicax
+ovo je sql
+UPDATE korisnik SET 
+					ime=\'Jessicax\'
+					WHERE korisnik_id=36
+				
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+					ime=\'Jessica\'
+					WHERE korisnik_id=36
+				
+ovo je korisnik
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+					ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'123456\'
+					WHERE korisnik_id=36
+				
+ovo je korisnik
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=0,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'13546546\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=0,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'4565454ddd\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=0,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'234234324\'
+                    WHERE korisnik_id=36
+                    
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=0,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'234234324\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'2342342\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'234423\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=NULL,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'123\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=NULL,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=\'\',
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'123\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=\'\',
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'sdfsdf\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=NULL,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'sdfsd\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je submit
+ovo je POST[\'id\']
+36
+ovo je POST[\'ime\']
+Jessica
+ovo je sql
+UPDATE korisnik SET 
+                    tip_korisnika_id=2,
+                    zanimanje_id=NULL,
+                    korime=\'jalba\',
+                    email=\'jalba@foi.hr\',
+                    ime=\'Jessica\',
+                    prezime=\'Alba\', 
+                    lozinka=\'123456\',
+                    telefonski_broj=\'\'
+                    WHERE korisnik_id=36
+                    
+ovo je korisnik
+ovo je korisnik_zanimanje_id
+NULL
+ovo je korisnik_zanimanje_id
+NULL
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=NULL,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+NULL
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=NULL,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+NULL
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=NULL,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+2
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=2,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+0
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=0,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+NULL
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=NULL,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+1
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=1,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+2
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=2,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+1
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=1,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+5
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=5,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+2
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=2,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+3
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=3,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+3
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=1,
+                zanimanje_id=3,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+3
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=0,
+                zanimanje_id=3,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                
+ovo je korisnik_zanimanje_id
+3
+ovo je sql
+UPDATE korisnik SET 
+                tip_korisnika_id=2,
+                zanimanje_id=3,
+                korime=\'jalba\',
+                email=\'jalba@foi.hr\',
+                ime=\'Jessica\',
+                prezime=\'Alba\', 
+                lozinka=\'123456\',
+                telefonski_broj=\'0915323816\'
+                WHERE korisnik_id=36
+                

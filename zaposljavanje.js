@@ -46,3 +46,25 @@ function sakrijMeni(){
 	}
 }
 
+/* $(document).ready(function(){
+	
+	$('#btnIzdvojiDarivatelje').click(function () {
+		//console.log("ovo je btnIzdvojiDarivatelje");
+		modalStatusiObavijest(strTitle="Obavijest", 'Budite strpljivi, podaci se učitavaju...')
+		AjGetTblDarivateljiPoKriterijima();
+	});
+
+    $("#chkbxSveAkcije").change(function() {
+		if(this.checked) {
+			AjTraziAktivnuAkciju(sveAkcije="true")
+		} else {
+			//$('#tblDarivatelji').DataTable().clear().draw();
+			AjTraziAktivnuAkciju(sveAkcije="false")
+		}
+
+	});
+
+
+
+}); */
+
