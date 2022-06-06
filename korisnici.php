@@ -1,12 +1,13 @@
 <?php
-	include "helpers.php";
+	include("predlosci/zaglavlje.php");
 
 	if(session_id()=="")session_start();
 
 	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
-		header("Location:obavijest.php?poruka=Niste prijavljeni kao korisnik!");
+		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
+		exit();
 	} else if($_SESSION['aktivni_korisnik_tip'] > 0) {
-		header("Location:obavijest.php?poruka=Nemate potrebne ovlasti za traženi pregled!");
+		echo "<script> location.href='obavijest.php?poruka=Nemate potrebne ovlasti za traženi pregled!'; </script>";
 	}
 
 ?>
@@ -26,16 +27,12 @@
     </head>
 	
 	<body>
-		<div id="zaglavlje"></div>
-		<script>
-			$(function() { $("#zaglavlje").load("/predlosci/zaglavlje.php"); });
-		</script>
 
 		<p>Korisnici</p>
 
-		<div id="podnozje"></div>
-		<script>
-			$(function() { $("#podnozje").load("/predlosci/podnozje.html"); });
-		</script>
 	</body>
 </html>
+
+<?php
+     include("predlosci/podnozje.php");
+?>

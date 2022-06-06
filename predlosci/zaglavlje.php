@@ -1,7 +1,4 @@
-<?php
-
-	include "../helpers.php";
-	
+<?php	
 	if(session_id()=="")session_start();
 
 	if(isset($_SESSION['aktivni_korisnik'])){
@@ -34,7 +31,7 @@
 		<h1>Sustav za zapošljavanje majstora</h1>
 
 		<div class="header">
-			<?php			
+			<?php
 				if($_SESSION['aktivni_korisnik'] != NULL){
 					echo "<span><strong>Korisnik: </strong>$aktivni_korisnik_ime</span><br/>";
 					echo "<span><strong>Tip korisnika: </strong>$aktivni_korisnik_tip_naziv</span><br/>";
@@ -56,6 +53,7 @@
 			<a href="ugovaranje_posl.php">Ugovaranje poslova</a>
 			<a href="ugovoreni_posl.php">Ugovoreni poslovi</a>
 			<a href="moji_poslovi.php">Moji poslovi</a>
+			<a href="majstori.php">Majstori</a>
 			<a href="zanimanja.php">Zanimanja</a>
 			<a href="korisnici.php">Korisnici</a>
 		</div>

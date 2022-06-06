@@ -1,6 +1,6 @@
 <?php
+ 	include("predlosci/zaglavlje.php");
 	include_once("baza.php");
-	include "helpers.php";
 
 	session_start();
 
@@ -13,7 +13,9 @@
 		unset($_SESSION["aktivni_korisnik_id"]);
 		unset($_SESSION['aktivni_korisnik_tip_naziv']);
 		session_destroy();
-		header("Location:index.php");
+
+		echo "<script> location.href='index.php'; </script>";
+		exit();
 	}
 
 	$greska= "";
@@ -40,7 +42,8 @@
 					$_SESSION['aktivni_korisnik_tip_naziv']=$tip_korisnika_naziv;
 				}
 
-				header("Location:index.php");
+				echo "<script> location.href='index.php'; </script>";
+				exit();
 			}
 		}
 		else $greska = "Molim unesite korisničko ime i lozinku";
@@ -48,50 +51,49 @@
 	
 	zatvoriVezuNaBazu($veza);
 ?>
- <head>
- 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-</head>
+<!DOCTYPE html>
+<html>
 
-<div id="zaglavlje"></div>
-<script>
-	$(function(){ $("#zaglavlje").load("/predlosci/zaglavlje.php"); });
-</script>
+	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
 
-<form id="prijava" name="prijava" method="POST" action="prijava.php" onsubmit="return validacija();">
-	<table>
-		<caption>Prijava u sustav</caption>
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align:center;">
-					<label class="greska"><?php if($greska!="")echo $greska; ?></label>
-				</td>
-			</tr>
-			<tr>
-				<td class="lijevi">
-					<label for="korisnicko_ime"><strong>Korisničko ime:</strong></label>
-				</td>
-				<td>
-					<input name="korisnicko_ime" id="korisnicko_ime" type="text" size="110"/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<label for="lozinka"><strong>Lozinka:</strong></label>
-				</td>
-				<td>
-					<input name="lozinka"	id="lozinka" type="password" size="110"/>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" style="text-align:center;">
-					<input name="submit" type="submit" value="Prijavi se"/>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</form>
+	<form id="prijava" name="prijava" method="POST" action="prijava.php" onsubmit="return validacija();">
+		<table>
+			<caption>Prijava u sustav</caption>
+			<tbody>
+				<tr>
+					<td colspan="2" style="text-align:center;">
+						<label class="greska"><?php if($greska!="")echo $greska; ?></label>
+					</td>
+				</tr>
+				<tr>
+					<td class="lijevi">
+						<label for="korisnicko_ime"><strong>Korisničko ime:</strong></label>
+					</td>
+					<td>
+						<input name="korisnicko_ime" id="korisnicko_ime" type="text" size="110"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="lozinka"><strong>Lozinka:</strong></label>
+					</td>
+					<td>
+						<input name="lozinka"	id="lozinka" type="password" size="110"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:center;">
+						<input name="submit" type="submit" value="Prijavi se"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
 
-<div id="podnozje"></div>
-<script>
-	$(function() { $("#podnozje").load("/predlosci/podnozje.html"); });
-</script>
+</html>
+
+<?php
+     include("predlosci/podnozje.php");
+?>

@@ -249,3 +249,11 @@ ovo je aktivni korisnikk id
 0
 ovo je aktivni korisnikk id
 1
+ovo je rs
+mysqli_result::__set_state(array(
+   'current_field' => NULL,
+   'field_count' => NULL,
+   'lengths' => NULL,
+   'num_rows' => NULL,
+   'type' => NULL,
+))
