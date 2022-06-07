@@ -46,6 +46,10 @@ function sakrijMeni(){
 	}
 }
 
+function poruka() {
+    console.log("ovo je greška");
+}
+
 /* $(document).ready(function(){
 	
 	$('#btnIzdvojiDarivatelje').click(function () {

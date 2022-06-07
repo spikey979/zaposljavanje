@@ -907,3 +907,168 @@ UPDATE korisnik SET
                 telefonski_broj=\'0915323816\'
                 WHERE korisnik_id=36
                 
+ovo je korime
+NULL
+ovo je korime
+NULL
+ovo je korime
+NULL
+ovo je korime
+NULL
+ovo je korisnik
+ovo je else
+ovo je korisnik
+ovo je else
+ovo je korisnik
+ovo je else
+ovo je submit
+ovo je korisnik
+ovo je dodaj
+ovo je korime
+NULL
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je submit
+ovo je korisnik
+ovo je korisnik
+ovo je korisnik
+ovo je dodaj
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je dodaj i korime
+perica
+ovo je korisnik
+ovo je dodaj i korime
+perica
+ovo je sql
+INSERT INTO korisnik
+				(tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj)
+				VALUES
+				(, NULL, \'perica\', \'asdf\', \'sdf\', \'asdf\', \'dsf\', \'sdfsd\');
+				
+ovo je korisnik
+ovo je dodaj i korime
+perica
+ovo je sql
+INSERT INTO korisnik
+				(tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj)
+				VALUES
+				(, 3, \'perica\', \'\', \'kiki\', \'smre\', \'\', \'\');
+				
+ovo je korisnik
+ovo je dodaj i korime
+perica
+ovo je sql
+INSERT INTO korisnik
+				(tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj)
+				VALUES
+				(, NULL, \'perica\', \'\', \'riki\', \'kiki\', \'\', \'\');
+				
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je sql
+INSERT INTO korisnik
+				(tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj)
+				VALUES
+				(, NULL, \'mirkec\', \'\', \'asdfadsf\', \'kiki\', \'\', \'\');
+				
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je sql
+INSERT INTO korisnik
+				(tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj)
+				VALUES
+				(, 4, \'mirkec\', \'\', \'sdf\', \'sdaf\', \'\', \'\');
+				
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je submit
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je sql
+INSERT INTO korisnik
+				(tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj)
+				VALUES
+				(1, 4, \'mirkec\', \'\', \'kiki\', \'smreki\', \'\', \'\');
+				
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je dodaj i korime
+mirkec
+ovo je korisnik
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je korisnik
+ovo je dodaj i korime
+mirkec
+ovo je korisnik
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je id za brisanje
+1
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je id za brisanje
+71
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je id za brisanje
+71
+ovo je korisnik
+ovo je dodaj i korime
+admin
+ovo je korisnik
+ovo je dodaj i korime
+admin
+ovo je korisnik
+ovo je dodaj i korime
+admin
+ovo je korisnik
+ovo je dodaj i korime
+ksmrekar
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je submit
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je submit
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je submit
+ovo je korisnik
+ovo je detalji ili promijeni
+ovo je id za brisanje
+72

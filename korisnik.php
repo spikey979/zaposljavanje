@@ -13,7 +13,7 @@
 	$veza=spojiSeNaBazu();
 
     if(isset($_POST['submit'])){
-        
+        custom_log("ovo je submit");
         $id=$_POST['id'];
         $korime=$_POST['korime'];
         $prezime=$_POST['prezime'];
@@ -27,41 +27,82 @@
             $korisnik_zanimanje_id = 'NULL';
         }
 
-        if($id==0){
-            $sql="INSERT INTO korisnikx
-            (id_tip,korisnicko_ime,lozinka,ime,prezime,email,slika)
-            VALUES
-            ($tip,'$kor_ime','$lozinka','$ime','$prezime','$email','$slika');
+        $sql="UPDATE korisnik SET 
+            tip_korisnika_id=$tip_korisnika,
+            zanimanje_id=$korisnik_zanimanje_id,
+            korime='$korime',
+            email='$email',
+            ime='$ime',
+            prezime='$prezime', 
+            lozinka='$lozinka',
+            telefonski_broj='$telefon'
+            WHERE korisnik_id=$id
             ";
-        }
-        else{
-            $sql="UPDATE korisnik SET 
-                tip_korisnika_id=$tip_korisnika,
-                zanimanje_id=$korisnik_zanimanje_id,
-                korime='$korime',
-                email='$email',
-                ime='$ime',
-                prezime='$prezime', 
-                lozinka='$lozinka',
-                telefonski_broj='$telefon'
-                WHERE korisnik_id=$id
-                ";
-        }
+        
         izvrsiUpit($veza,$sql);
         echo "<script> location.href='korisnici.php'; </script>";
         exit();
 	}
 
+    if(isset($_POST['dodaj'])){
+        custom_log("ovo je dodaj i korime", $_POST['korime']);
+        $korime=$_POST['korime'];
+        $prezime=$_POST['prezime'];
+        $telefon=$_POST['telefon'];
+        $email=$_POST['email'];
+        $lozinka=$_POST['lozinka'];
+        $ime=$_POST['ime'];
+        $tip_korisnika = $_POST["tip"];
+        $korisnik_zanimanje_id = $_POST["zanimanje"];
+        if($korisnik_zanimanje_id == 0) {
+            $korisnik_zanimanje_id = 'NULL';
+        }
+        //provjeri postoji li takvo korisničko ime u bazi
+        $sql="SELECT korisnik_id FROM korisnik WHERE korime='$korime'";
+        $rs=izvrsiUpit($veza,$sql);
+        list($korisnik_id)=mysqli_fetch_array($rs);
+        if(mysqli_num_rows($rs)>0) {
+            echo "<script> location.href='obavijest.php?poruka=Korisničko ime: ".$korime." već postoji u bazi korisnika!'; </script>";
+            exit();
+        }
+
+        $sql="INSERT INTO korisnik
+            (tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj)
+            VALUES
+            ($tip_korisnika, $korisnik_zanimanje_id, '$korime', '$email', '$ime', '$prezime', '$lozinka', '$telefon');
+            ";
+        izvrsiUpit($veza,$sql);
+        echo "<script> location.href='korisnici.php'; </script>";
+        exit();
+    }
+
+    if(isset($_POST['brisi'])){
+        custom_log("ovo je id za brisanje", $_POST['id']);
+        $id=$_POST['id'];
+        $sql="DELETE FROM korisnik WHERE korisnik_id=$id";
+        $rs=izvrsiUpit($veza,$sql);
+        echo "<script> location.href='korisnici.php'; </script>";
+        exit();
+    }
+
     if(isset($_GET['korisnik'])){
+        custom_log("ovo je korisnik");
         $uredi = 'disabled';
-        if(isset($_GET['uredi'])){
+        $korime_uredi = 'readonly';
+        if(isset($_GET['uredi']) || isset($_GET['dodaj'])){
             $uredi = 'enabled';
         }
-		$id=$_GET['korisnik'];
-		$sql="SELECT tip_korisnika_id, zanimanje_id, korime, prezime, ime, zanimanje_id, email, telefonski_broj, lozinka FROM korisnik WHERE korisnik_id='$id'";
-		$rs=izvrsiUpit($veza,$sql);
-		list($tip_korisnika, $korisnik_zanimanje_id, $korime, $prezime, $ime, $zanimanje_id, $email, $telefon, $lozinka)=mysqli_fetch_array($rs);
+        if(!isset($_GET['dodaj'])) {
+            custom_log("ovo je detalji ili promijeni");
+            $id=$_GET['korisnik'];
+            $sql="SELECT tip_korisnika_id, zanimanje_id, korime, prezime, ime, zanimanje_id, email, telefonski_broj, lozinka FROM korisnik WHERE korisnik_id='$id'";
+            $rs=izvrsiUpit($veza,$sql);
+            list($tip_korisnika, $korisnik_zanimanje_id, $korime, $prezime, $ime, $zanimanje_id, $email, $telefon, $lozinka)=mysqli_fetch_array($rs);
+        } else {
+            $korime_uredi = 'enabled required';
+        }
 	}
+    //INSERT INTO korisnik (tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj) VALUES (1, NULL, \'perica\', \'asdf\', \'sdf\', \'asdf\', \'dsf\', \'sdfsd\');
 
 ?>
 
@@ -74,6 +115,7 @@
 		<meta name="datum" content="28.05.2022." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="adolenec.css" rel="stylesheet" type="text/css">
+        <!-- <script type="text/javascript" src="zaposljavanje.js"></script> -->
     </head>
     
     <body>
@@ -95,7 +137,7 @@
 					<label for="korime"><strong>Korisničko ime:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="korime" id="korime" value="<?php echo $korime; ?>" size="50" maxlength="50" <?php echo $uredi; ?> required/>
+					<input type="text" name="korime" id="korime" value="<?php echo $korime; ?>" size="50" maxlength="50" <?php echo $korime_uredi; ?>/>
 				</td>
 			</tr>
 			<tr>
@@ -142,7 +184,7 @@
             <tr>
 				<td><label for="tip"><strong>Tip korisnika:</strong></label></td>
 				<td>
-					<select id="tip" name="tip" <?php echo $uredi; ?>>
+					<select name="tip" <?php echo $uredi; ?> >
 						<?php
                         	echo '<option value="0"';if($tip_korisnika==0)echo " selected='selected'";echo'>Administrator</option>';
 							echo '<option value="1"';if($tip_korisnika==1)echo " selected='selected'";echo'>Zaposlenik</option>';
@@ -175,7 +217,16 @@
 			</tr>
             <tr>
 				<td colspan="2" style="text-align:center;">
-                    <input type="submit" name="submit" value="Spremi"/>
+                    <?php
+                        if(isset($_GET['uredi'])){
+                            echo '<input type="submit" name="submit" value="Spremi promjene"/>';
+                        } else if(isset($_GET['obrisi'])){
+                            echo '<input type="submit" name="brisi" value="Obriši korisnika"/>';
+                        } else if(isset($_GET['dodaj'])){
+                            echo '<input type="submit" name="dodaj" value="Dodaj novog korisnika"/>';
+                        }
+					?>
+                    <!-- <input type="submit" name="submit" value="Spremi"/> -->
                 </td>
             </tr>
 		</tbody>
