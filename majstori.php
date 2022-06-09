@@ -28,8 +28,8 @@
    <body>
 		
 		<h1>Majstori</h1>
-			<table width = "550px" height = "50px" border="2" >
-				<tr bgcolor="#5f9ea0">
+			<table width = "550px" height = "50px" border="2" align="center" >
+				<tr bgcolor="#1ca372">
 					<td>Prezime</td>
 					<td>Ime</td>
 					<td>Zanimanje</td>

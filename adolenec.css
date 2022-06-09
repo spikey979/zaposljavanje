@@ -1,7 +1,7 @@
 body {
   margin: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color:#EEEEEE;
+  background-color:#cfcccc;
   border:1pt solid #04AA6D;
   height:100%;
   width:1000px;
@@ -30,10 +30,21 @@ body {
   color: black;
 }
 
-.nav a.active {
+.nav a:active {
   background-color: #04AA6D;
   color: white;
 }
+
+.link {
+  color: #f2f2f2;
+  background-color: #333;
+  
+}
+
+.link a:hover {
+   background-color: black; 
+}
+
 
 .header {
   text-align: right;	
@@ -44,13 +55,14 @@ body {
    background-color: #333;
    text-align: center;
    color: white;
+   
 }	
 
 h1 {
 	
-   text-align; right;
-   padding-top: 15px;  
+  padding-top: 15px;  
 }	
+
 
 .autor {
   text-align: center;

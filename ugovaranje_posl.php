@@ -28,8 +28,8 @@
             ";
         //custom_log("ovo je sql", $sql);
         izvrsiUpit($veza,$sql);
-        echo "<script> location.href='obavijest.php?poruka=Posao je ugovoren, možete ga vidjeti u popisu ugovorenih poslova.'; </script>";
-        exit();
+        echo "<script> location.href='ugovoreni_posl.php?korisnik=$korisnik_id'; </script>";
+		exit();
 	}
 ?>
 
@@ -77,7 +77,7 @@
 					<label for="opis"><strong>Opis posla:</strong></label>
 				</td>
 				<td>
-				<textarea id="opis" name="opis" rows="4" cols="50"></textarea>
+					<textarea id="opis" name="opis" rows="4" cols="50"></textarea>
 				</td>
 			</tr>
             <tr>
@@ -85,7 +85,7 @@
 					<label for="napomena"><strong>Napomena:</strong></label>
 				</td>
 				<td>
-				<textarea id="napomena" name="napomena" rows="4" cols="50"></textarea>
+					<textarea id="napomena" name="napomena" rows="4" cols="50"></textarea>
 				</td>
 			</tr>
 			<tr>

@@ -21,8 +21,6 @@
 		<meta name="datum" content="28.05.2022." />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
-
 		<link href="adolenec.css" rel="stylesheet" type="text/css">
     </head>
 	
@@ -36,11 +34,11 @@
 				}
 			?>
 		</div>
-			<table width = "700px" height = "50px" border="2" >
-				<tr bgcolor="#5f9ea0">
+			<table width = "700px" height = "50px" border="2" align="center" >
+				<tr bgcolor="#1ca372">
 					<td>Prezime</td>
 					<td>Ime</td>
-					<td>Kor. ime</td>
+					<td>Korisničko ime</td>
 					<td></td>
 					<td></td>
 					<td></td>

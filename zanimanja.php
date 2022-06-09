@@ -35,8 +35,8 @@
 		</div>
 
 		<div>
-			<table width = "700px" height = "50px" border="2" >
-				<tr bgcolor="#5f9ea0">
+			<table width = "700px" height = "50px" border="2" align="center" >
+				<tr bgcolor="#1ca372">
 					<td>Naziv</td>
 					<td>Opis</td>
 					<td></td>

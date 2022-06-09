@@ -42,7 +42,7 @@
 					echo "<a class='link' href='prijava.php'>Prijava</a><br/>";
 				}
 
-				echo "<br/><a class='link' href='o_autoru.html'>O autoru</a>";
+				echo "<br/><a class='link' href='o_autoru.html'\\target=\\>O autoru</a>";
 			?>
 		</div>
 
