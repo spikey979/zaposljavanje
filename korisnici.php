@@ -7,12 +7,9 @@
 	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
 		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
 		exit();
-	} //else if($_SESSION['aktivni_korisnik_tip'] > 0) {
-		//echo "<script> location.href='obavijest.php?poruka=Nemate potrebne ovlasti za traženi pregled!'; </script>";
-	//}
-//$_SESSION["aktivni_korisnik_id"]
-	$veza=spojiSeNaBazu();
+	} 
 
+	$veza=spojiSeNaBazu();
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +21,7 @@
 		<meta name="datum" content="28.05.2022." />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
 
 		<link href="adolenec.css" rel="stylesheet" type="text/css">
     </head>
@@ -33,7 +30,11 @@
 
 		<h1>Korisnici</h1>
 		<div>
-			<a class='link' href='korisnik.php?korisnik=$id&dodaj=1'>Dodaj novog korisnika</a></td>
+			<?php
+				if($_SESSION['aktivni_korisnik_tip'] == 0) { //novog korisnika može dodati samo admin
+					echo "<a class='link' href='korisnik.php?korisnik=1&dodaj=1'>Dodaj novog korisnika</a>";
+				}
+			?>
 		</div>
 			<table width = "700px" height = "50px" border="2" >
 				<tr bgcolor="#5f9ea0">
@@ -71,7 +72,6 @@
 							
 							echo $link;
 							echo "</tr>";
-
 						}
 					}
 				?>

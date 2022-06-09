@@ -13,7 +13,6 @@
 	$veza=spojiSeNaBazu();
 
     if(isset($_POST['submit'])){
-        custom_log("ovo je submit");
         $id=$_POST['id'];
         $korime=$_POST['korime'];
         $prezime=$_POST['prezime'];
@@ -45,7 +44,6 @@
 	}
 
     if(isset($_POST['dodaj'])){
-        custom_log("ovo je dodaj i korime", $_POST['korime']);
         $korime=$_POST['korime'];
         $prezime=$_POST['prezime'];
         $telefon=$_POST['telefon'];
@@ -77,7 +75,6 @@
     }
 
     if(isset($_POST['brisi'])){
-        custom_log("ovo je id za brisanje", $_POST['id']);
         $id=$_POST['id'];
         $sql="DELETE FROM korisnik WHERE korisnik_id=$id";
         $rs=izvrsiUpit($veza,$sql);
@@ -86,24 +83,30 @@
     }
 
     if(isset($_GET['korisnik'])){
-        custom_log("ovo je korisnik");
         $uredi = 'disabled';
         $korime_uredi = 'readonly';
         if(isset($_GET['uredi']) || isset($_GET['dodaj'])){
             $uredi = 'enabled';
         }
         if(!isset($_GET['dodaj'])) {
-            custom_log("ovo je detalji ili promijeni");
             $id=$_GET['korisnik'];
             $sql="SELECT tip_korisnika_id, zanimanje_id, korime, prezime, ime, zanimanje_id, email, telefonski_broj, lozinka FROM korisnik WHERE korisnik_id='$id'";
             $rs=izvrsiUpit($veza,$sql);
             list($tip_korisnika, $korisnik_zanimanje_id, $korime, $prezime, $ime, $zanimanje_id, $email, $telefon, $lozinka)=mysqli_fetch_array($rs);
         } else {
+            //dodavanje novog korisnika
             $korime_uredi = 'enabled required';
+            $id = "";
+            $korime="";
+            $prezime="";
+            $telefon="";
+            $email="";
+            $lozinka="";
+            $ime="";
+            $tip_korisnika=2;
+            $korisnik_zanimanje_id = 0;
         }
 	}
-    //INSERT INTO korisnik (tip_korisnika_id, zanimanje_id, korime, email, ime, prezime, lozinka, telefonski_broj) VALUES (1, NULL, \'perica\', \'asdf\', \'sdf\', \'asdf\', \'dsf\', \'sdfsd\');
-
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +118,6 @@
 		<meta name="datum" content="28.05.2022." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="adolenec.css" rel="stylesheet" type="text/css">
-        <!-- <script type="text/javascript" src="zaposljavanje.js"></script> -->
     </head>
     
     <body>
@@ -226,17 +228,12 @@
                             echo '<input type="submit" name="dodaj" value="Dodaj novog korisnika"/>';
                         }
 					?>
-                    <!-- <input type="submit" name="submit" value="Spremi"/> -->
                 </td>
             </tr>
 		</tbody>
 	</table>
     </form>
 
- 
-    
-  
-	
     </body>
 
 </html>

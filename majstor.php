@@ -53,7 +53,7 @@
 					<label for="prezime"><strong>Prezime:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="prezime" id="prezime" value="<?php echo $prezime; ?>" size="50" maxlength="50"/>
+					<input type="text" name="prezime" id="prezime" value="<?php echo $prezime; ?>" size="50" maxlength="50" readonly/>
 				</td>
 			</tr>
             <tr>
@@ -61,7 +61,7 @@
 					<label for="ime"><strong>Ime:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="ime" id="ime" value="<?php echo $ime; ?>" size="50" maxlength="50"/>
+					<input type="text" name="ime" id="ime" value="<?php echo $ime; ?>" size="50" maxlength="50" readonly/>
 				</td>
 			</tr>
             <tr>
@@ -69,7 +69,7 @@
 					<label for="zanimanje"><strong>Zanimanje:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="zanimanje" id="zanimanje" value="<?php echo $zanimanje_naziv; ?>" size="50" maxlength="50"/>
+					<input type="text" name="zanimanje" id="zanimanje" value="<?php echo $zanimanje_naziv; ?>" size="50" maxlength="50" readonly/>
 				</td>
 			</tr>
             <tr>
@@ -77,7 +77,7 @@
 					<label for="telefon"><strong>Telefon:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="telefon" id="telefon" value="<?php echo $telefon; ?>" size="50" maxlength="50"/>
+					<input type="text" name="telefon" id="telefon" value="<?php echo $telefon; ?>" size="50" maxlength="50" readonly/>
 				</td>
 			</tr>
             <tr>
@@ -85,7 +85,7 @@
 					<label for="email"><strong>E-mail:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="email" id="email" value="<?php echo $email; ?>" size="50" maxlength="50"/>
+					<input type="text" name="email" id="email" value="<?php echo $email; ?>" size="50" maxlength="50" readonly/>
 				</td>
 			</tr>
 			

@@ -32,7 +32,7 @@
 
 		<div class="header">
 			<?php
-				if($_SESSION['aktivni_korisnik'] != NULL){
+				if(isset($_SESSION['aktivni_korisnik']) && $_SESSION['aktivni_korisnik'] != NULL){
 					echo "<span><strong>Korisnik: </strong>$aktivni_korisnik_ime</span><br/>";
 					echo "<span><strong>Tip korisnika: </strong>$aktivni_korisnik_tip_naziv</span><br/>";
 					echo "<a class='link' href='prijava.php?logout=1'>Odjava</a><br/>";
