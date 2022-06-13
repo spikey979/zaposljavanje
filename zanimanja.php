@@ -30,17 +30,17 @@
 	<body>
 
 		<h1>Zanimanja</h1>
-		<div>
+		<!--<div>
 			<a class='link' href='zanimanje.php?zanimanje=$id&dodaj=1'>Dodaj novo zanimanje</a>
-		</div>
+		</div>-->
 
 		<div>
-			<table width = "700px" height = "50px" border="2" align="center" >
+			<table width = "900px" height = "50px" border="2" align="center" >
 				<tr bgcolor="#1ca372">
-					<td>Naziv</td>
-					<td>Opis</td>
-					<td></td>
-					<td></td>
+					<td align="center"><strong>Naziv<strong></td>
+					<td align="center"><strong>Opis</strong></td>
+					<td colspan="2" align="center"><a class='link' href='zanimanje.php?zanimanje=$id&dodaj=1'>DODAJ ZANIMANJE </a></td>
+					
 				</tr>
 				<?php
 				 	$sql="SELECT zanimanje_id, naziv, opis FROM zanimanje ORDER BY naziv ASC";

@@ -1072,3 +1072,206 @@ ovo je korisnik
 ovo je detalji ili promijeni
 ovo je id za brisanje
 72
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo jej aaaaaa majstor_id
+29
+ovo je majstor_id
+29
+ovo jej aaaaaa majstor_id
+29
+ovo je majstor_id
+29
+ovo jej aaaaaa majstor_id
+29
+ovo je majstor_id
+29
+ovo jej aaaaaa majstor_id
+29
+ovo je majstor_id
+29
+ovo jej aaaaaa majstor_id
+29
+ovo je majstor_id
+4
+ovo jej aaaaaa majstor_id
+4
+ovo je majstor_id
+4
+ovo jej aaaaaa majstor_id
+4
+ovo je majstor_id
+29
+ovo jej aaaaaa majstor_id
+29
+ovo je majstor_id
+2
+ovo je od xxx
+ovo je od yyyy
+ovo jefilter_datum
+ AND datum_posudbe > \'1970-01-01 00:00:00\' AND datum_posudbe IS NOT NULL AND datum_posudbe < \'1970-01-01 00:00:00\
+ovo je filter_datum
+
+ovo je od xxx
+ovo je od yyyy
+ovo je filter_datum
+ AND datum_posudbe > \'2022-06-13 00:00:00\' AND datum_posudbe IS NOT NULL AND datum_posudbe < \'2022-06-13 00:00:00\
+ovo je od xxx
+ovo je filter_datum
+ AND datum_posudbe > \'2021-06-13 00:00:00\
+ovo je filter_datum
+
+ovo je filter_datum
+
+ovo je filter_datum
+
+ovo je od xxx
+ovo je filter_datum
+ AND datum_posudbe > \'1970-01-01 00:00:00\
+ovo je od xxx
+ovo je od yyyy
+ovo je filter_datum
+ AND datum_posudbe > \'2021-06-13 00:00:00\' AND datum_posudbe IS NOT NULL AND datum_posudbe < \'2022-06-13 00:00:00\
+ovo je od xxx
+ovo je od yyyy
+ovo je filter_datum
+ AND datum_posudbe > \'2021-06-13 00:00:00\' AND datum_posudbe IS NOT NULL AND datum_posudbe < \'2022-06-13 00:00:00\
+ovo je filter_datum
+
+ovo je od xxx
+ovo je od yyyy
+ovo je filter_datum
+ AND datum_posudbe > \'2021-06-13 00:00:00\' AND datum_posudbe IS NOT NULL AND datum_posudbe < \'2022-06-13 00:00:00\
+ovo je od xxx
+ovo je od yyyy
+ovo je filter_datum
+ AND datum_posudbe > \'2021-06-13 00:00:00\' AND datum_posudbe IS NOT NULL AND datum_posudbe < \'2022-06-13 00:00:00\
+ovo je filter_datum
+
+ovo je majstor_id
+12
+ovo je filter_datum
+
+ovo je filter_datum
+
+ovo je filter_datum
+
+ovo je od xxx
+ovo je filter_datum
+ AND datum_posudbe > \'2022-12-01 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2022-06-13 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE  AND datum_vrijeme_postavljanja > \'2022-06-13 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2022-06-13 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE 1=1  AND datum_vrijeme_postavljanja > \'2022-06-13 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2021-12-01 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE 1=1  AND datum_vrijeme_postavljanja > \'2021-12-01 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE 1=1  AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je od yyyy
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\' AND datum_vrijeme_postavljanja IS NOT NULL AND datum_vrijeme_postavljanja < \'2021-12-01 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE 1=1  AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\' AND datum_vrijeme_postavljanja IS NOT NULL AND datum_vrijeme_postavljanja < \'2021-12-01 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE 1=1  AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE 1=1  AND datum_vrijeme_postavljanja > \'2021-11-01 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je filter_datum
+
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je filter_datum
+
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je filter_datum
+
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je od xxx
+ovo je od yyyy
+ovo je filter_datum
+ AND datum_vrijeme_postavljanja > \'2021-06-13 00:00:00\' AND datum_vrijeme_postavljanja IS NOT NULL AND datum_vrijeme_postavljanja < \'2022-06-13 00:00:00\
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika WHERE 1=1  AND datum_vrijeme_postavljanja > \'2021-06-13 00:00:00\' AND datum_vrijeme_postavljanja IS NOT NULL AND datum_vrijeme_postavljanja < \'2022-06-13 00:00:00\' ORDER BY datum_vrijeme_postavljanja DESC
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je sql
+SELECT DISTINCT slika, posao_id FROM slika ORDER BY datum_vrijeme_postavljanja DESC
+ovo je majstor_id
+12
+ovo je majstor_id
+12
+ovo je aktivni_korisnik_tip
+2
+ovo je aktivni_korisnik_tip
+2
+ovo je aktivni_korisnik_tip
+1
+ovo je majstor_id
+29
+ovo je aktivni_korisnik_tip
+1
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo je majstor_id
+29
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1

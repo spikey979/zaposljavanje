@@ -8,6 +8,9 @@
 	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
 		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
 		exit();
+	} else if($_SESSION['aktivni_korisnik_tip'] > 1) {//samo majstori i admin
+		echo "<script> location.href='obavijest.php?poruka=Nemate potrebne ovlasti za traženi pregled!'; </script>";
+		exit();
 	}
 
 	$veza=spojiSeNaBazu();
@@ -15,20 +18,10 @@
     if(isset($_GET['posao'])){
         //dohvati posao po posao_id ključu
 		$posao_id=$_GET['posao'];
-		$sql="SELECT majstor_id, opis, datum_vrijeme_kreiranja, `status`, napomena, datum_vrijeme_završetka FROM posao WHERE posao_id=$posao_id";
+		$sql="SELECT opis, datum_vrijeme_kreiranja, `status`, napomena, datum_vrijeme_završetka FROM posao WHERE posao_id=$posao_id";
 		$rs=izvrsiUpit($veza,$sql);
-		list($majstor_id, $opis, $datum_vrijeme_kreiranja, $status, $napomena, $datum_vrijeme_završetka)=mysqli_fetch_array($rs);
-        custom_log("ovo je majstor_id", $majstor_id);
+		list($opis, $datum_vrijeme_kreiranja, $status, $napomena, $datum_vrijeme_završetka)=mysqli_fetch_array($rs);
 
-        //dohvati majstora po majstor_id ključu
-        $sql="SELECT ime, prezime, zanimanje_id FROM korisnik WHERE korisnik_id = $majstor_id";
-        $rs=izvrsiUpit($veza,$sql);
-        list($majstor_ime, $majstor_prezime, $zanimanje_id)=mysqli_fetch_array($rs);
-
-        //dohvati naziv zanimanja po zanimanje_id ključu
-        $sql="SELECT naziv FROM zanimanje WHERE zanimanje_id =$zanimanje_id";
-        $rs=izvrsiUpit($veza, $sql);
-        list($zanimanje_naziv)=mysqli_fetch_array($rs);
 
         //formatiranje datuma
         $datum = strtotime($datum_vrijeme_kreiranja);
@@ -74,7 +67,7 @@
     
     <body>
 		
-		<h1>Ugovoreni posao - detalji</h1>
+		<h1>Moj posao - detalji</h1>
         <table>
 		<tbody>
 			<tr>
@@ -90,7 +83,20 @@
 					<label for="status"><strong>Status:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="status" value="<?php echo $status_ime; ?>" size="51" maxlength="50" disabled/>
+                    <select id="status" name="status">
+                    <option value=0>zatražen</option>
+                    <?php
+                        $statusi = array("zatražen", "odobren", "završen", "odbijen");
+                        for ($i = 0; $i < 4; $i++) {
+                            echo "<option value=".$i;
+                            if($status == $i) {
+                                echo " selected='selected'";
+                            }
+                            echo ">".$statusi[$i].'</option>';
+                        } 
+                    
+                    ?>
+
 				</td>
 			</tr>
             <tr>
@@ -109,28 +115,13 @@
 				    <textarea id="napomena" name="napomena" rows="4" cols="50" disabled><?php echo $napomena; ?></textarea>
 				</td>
 			</tr>
-            <tr>
-				<td>
-					<label for="ime_majstora"><strong>Ime i prezime majstora:</strong></label>
-				</td>
-				<td>
-                    <a class='link' href='majstor.php?majstor=<?php echo $majstor_id;?>' > <?php echo $majstor_ime." ".$majstor_prezime; ?></a>
-				</td>
-			</tr>
-            <tr>
-				<td>
-					<label for="zanimanje_majstora"><strong>Zanimanje majstora:</strong></label>
-				</td>
-				<td>
-					<input type="text" name="zanimanje_majstora" value="<?php echo $zanimanje_naziv; ?>" size="51" maxlength="50" disabled/>
-				</td>
-			</tr>
+           
             <tr>
 				<td>
 					<label for="dv_zavrsetka"><strong>Datum i vrijeme završetka:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="dv_zavrsetka" value="<?php echo $formatiran_dv_završetka; ?>" size="51" maxlength="50" disabled/>
+					<input type="text" name="dv_zavrsetka" value="<?php echo $formatiran_dv_završetka; ?>" size="51" maxlength="50"/>
 				</td>
 			</tr>
 

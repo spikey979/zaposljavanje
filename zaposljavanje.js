@@ -1,8 +1,8 @@
-function trenutnaForma(){
+/* function trenutnaForma(){
 	var trenutnaForma=document.getElementsByTagName("form")[0]["name"];
 	if(typeof(trenutnaForma)=='undefined')return null;
 	return trenutnaForma;
-}
+} */
 
 function validacija(){
 	var greska="";
@@ -31,7 +31,7 @@ function postaviDatum(text){
   text.value=day+"."+month+"."+year+".";
 }
 
-function sakrijMeni(){
+/* function sakrijMeni(){
   var meni=document.getElementById("navigacija");
   var tekst=document.getElementById("tekst");
   if(meni.style.visibility==="hidden"){
@@ -44,11 +44,11 @@ function sakrijMeni(){
 		meni.style.display="none";
 		tekst.innerHTML="prikaži meni";
 	}
-}
+} */
 
-function poruka() {
+/* function poruka() {
     console.log("ovo je greška");
-}
+} */
 
 /* $(document).ready(function(){
 	

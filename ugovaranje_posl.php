@@ -85,7 +85,7 @@
 					<label for="napomena"><strong>Napomena:</strong></label>
 				</td>
 				<td>
-					<textarea id="napomena" name="napomena" rows="4" cols="50"></textarea>
+					<textarea id="napomena" name="napomena" rows="4" cols="50" ></textarea>
 				</td>
 			</tr>
 			<tr>

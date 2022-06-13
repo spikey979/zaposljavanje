@@ -28,13 +28,14 @@
 	<body>
 
 		<h1>Ugovoreni poslovi</h1>
-			<table width = "800px" height = "50px" border="2" align="center" >
-				<tr bgcolor="#1ca372">
-					<td>Datum i vrijeme kreiranja</td>
-					<td>Status</td>
-					<td>Opis</td>
-					<td>Napomena</td>
-					<td>Datum i vrijeme završetka</td>
+				
+			<table  class="tablica" width = "800px" height ="50px" border="2" align="center">
+			 	<tr bgcolor="#1ca372">
+					<td align="center"><strong>Datum i vrijeme kreiranja</strong></td>
+					<td align="center"><strong>Status</strong></div></td>
+					<td align="center"><strong>Opis</strong></td>
+					<td align="center"><strong>Napomena</strong></td>
+					<td align="center"><strong>Datum i vrijeme završetka</strong></td>
 					<td></td>
 				</tr>
 				<?php
@@ -84,7 +85,7 @@
 					}
 				?>
  			</table>
-
+        
 	</body>
 </html>
 

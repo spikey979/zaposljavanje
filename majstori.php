@@ -30,9 +30,9 @@
 		<h1>Majstori</h1>
 			<table width = "550px" height = "50px" border="2" align="center" >
 				<tr bgcolor="#1ca372">
-					<td>Prezime</td>
-					<td>Ime</td>
-					<td>Zanimanje</td>
+					<td align="center"><strong>Prezime</strong></td>
+					<td align="center"><strong>Ime</strong></td>
+					<td align="center"><strong>Zanimanje</strong></td>
 					<td></td>
 				</tr>
 				<?php

@@ -27,21 +27,24 @@
 	<body>
 
 		<h1>Korisnici</h1>
-		<div>
+		<!--<div>
 			<?php
 				if($_SESSION['aktivni_korisnik_tip'] == 0) { //novog korisnika može dodati samo admin
 					echo "<a class='link' href='korisnik.php?korisnik=1&dodaj=1'>Dodaj novog korisnika</a>";
 				}
 			?>
-		</div>
+		</div>-->
 			<table width = "700px" height = "50px" border="2" align="center" >
 				<tr bgcolor="#1ca372">
-					<td>Prezime</td>
-					<td>Ime</td>
-					<td>Korisničko ime</td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td align="center"><strong>Prezime</strong></td>
+					<td align="center"><strong>Ime</strong></td>
+					<td align="center"><strong>Korisničko ime</strong></td>
+					<td colspan="3" align="center"><?php
+				if($_SESSION['aktivni_korisnik_tip'] == 0) { //novog korisnika može dodati samo admin
+					echo "<a class='link' href='korisnik.php?korisnik=1&dodaj=1'>DODAJ NOVOG KORISNIKA</a>";
+				}
+			?></td>
+					
 				</tr>
 				<?php
 				 	if($_SESSION['aktivni_korisnik_tip'] > 0) { //ako korisnik nije administrator, prikaži samo njega
