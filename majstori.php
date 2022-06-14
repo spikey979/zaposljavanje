@@ -5,7 +5,7 @@
 
 	if(session_id()=="")session_start();
 
-	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
+	if(!isset($_SESSION['aktivni_korisnik_tip']) || $_SESSION['aktivni_korisnik_tip'] == NULL) {
 		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
 		exit();
 	}
@@ -30,10 +30,8 @@
 		<h1>Majstori</h1>
 			<table width = "550px" height = "50px" border="2" align="center" >
 				<tr bgcolor="#1ca372">
-					<td align="center"><strong>Prezime</strong></td>
-					<td align="center"><strong>Ime</strong></td>
+					<td align="center"><strong>Prezime i ime</strong></td>
 					<td align="center"><strong>Zanimanje</strong></td>
-					<td></td>
 				</tr>
 				<?php
 					$sql="SELECT korisnik_id, ime, prezime, zanimanje_id FROM korisnik WHERE tip_korisnika_id = 1 ORDER BY prezime ASC";
@@ -48,12 +46,10 @@
 							else {
 								list($zanimanje_naziv)=mysqli_fetch_array($rs_1);
 							}
-
+							$prezime_ime = $prezime.' '.$ime;
 							echo "<tr>
-								<td>$prezime</td>
-								<td>$ime</td>
-								<td>$zanimanje_naziv</td>
-								<td><a class='link' href='majstor.php?majstor=$id'>DETALJI</a></td>
+								<td align='center'><a class='link' href='majstor.php?majstor=$id'>$prezime_ime</a></td>
+								<td align='center'>$zanimanje_naziv</td>
 							";
 							echo "</tr>";
 

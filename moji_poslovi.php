@@ -5,7 +5,7 @@
 
 	if(session_id()=="")session_start();
 
-	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
+	if(!isset($_SESSION['aktivni_korisnik_tip']) || $_SESSION['aktivni_korisnik_tip'] == NULL) {
 		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
 		exit();
 	} else if($_SESSION['aktivni_korisnik_tip'] > 1) {//samo majstori i admin
@@ -42,7 +42,7 @@
 				</tr>
 				<?php
 					$majstor_id = $_SESSION["aktivni_korisnik_id"];
-					$sql="SELECT posao_id, majstor_id, opis, datum_vrijeme_kreiranja, `status`, napomena, datum_vrijeme_završetka FROM posao WHERE majstor_id = $majstor_id ORDER BY datum_vrijeme_kreiranja DESC";
+					$sql="SELECT posao_id, majstor_id, opis, datum_vrijeme_kreiranja, `status`, napomena, datum_vrijeme_završetka FROM posao WHERE majstor_id = $majstor_id ORDER BY `status`, datum_vrijeme_kreiranja ASC";
 					$rs=izvrsiUpit($veza, $sql);
 					if(mysqli_num_rows($rs)==0)$greska="Nema rezultata za postavljeni upit!";
 					else{

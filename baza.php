@@ -8,8 +8,8 @@
 	//dev
 	/* define("POSLUZITELJ","127.0.0.1");
 	define("BAZA","iwa_2021_za_projekt");
-	//define("BAZA_KORISNIK","kiki");
-	define("BAZA_KORISNIK","kristijan");
+	define("BAZA_KORISNIK","kiki");
+	//define("BAZA_KORISNIK","kristijan");
 	define("BAZA_LOZINKA","psycho979"); */
 
 	function spojiSeNaBazu(){

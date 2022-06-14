@@ -1,10 +1,6 @@
 <?php
 
     if(session_id()=="")session_start();
-    /* if(isset($_GET['msg'])){
-		echo "nisi logiran";
-        echo $_GET['msg'];
-	} */
 
 ?>
 

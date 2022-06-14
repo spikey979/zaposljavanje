@@ -5,7 +5,7 @@
 
 	if(session_id()=="")session_start();
 
-	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
+	if(!isset($_SESSION['aktivni_korisnik_tip']) || $_SESSION['aktivni_korisnik_tip'] == NULL) {
 		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
 		exit();
 	}
@@ -88,6 +88,88 @@
 					<input type="text" name="email" id="email" value="<?php echo $email; ?>" size="50" maxlength="50" readonly/>
 				</td>
 			</tr>
+
+			<?php
+			if($_SESSION["aktivni_korisnik_tip"] == 0){
+				if(isset($_GET['majstor'])){
+					$majstor_id=$_GET['majstor'];
+				} else {
+					exit;
+				}
+				$korisnik_id = $_SESSION["aktivni_korisnik_id"];
+				$sql="SELECT `status` FROM posao WHERE majstor_id = $majstor_id";
+				$rs=izvrsiUpit($veza, $sql);
+				if(mysqli_num_rows($rs)==0)$greska="Nema rezultata za postavljeni upit!";
+				else{
+					$broj_zatrazenih_poslova = 0;
+					$broj_odobrenih_poslova = 0;
+					$broj_zavrsenih_poslova = 0;
+					$broj_odbijenih_poslova = 0;
+					while(list($status)=mysqli_fetch_array($rs)) {
+						switch ($status) {
+							case 0:
+								$broj_zatrazenih_poslova++;
+							break;
+							case 1:
+								$broj_odobrenih_poslova++;
+							break;
+							case 2:
+								$broj_zavrsenih_poslova++;
+							break;
+							case 3:
+								$broj_odbijenih_poslova++;
+							break;
+						}
+					}
+
+					echo "<tr>
+					<td colspan='2' style='text-align:center;'>
+						<label <strong>Statistika poslova:</strong></label>
+					</td> </tr>";
+
+					echo "<tr>
+					<td>
+						<label><strong>Br. zatraženih:</strong></label>
+					</td>
+					<td>
+						<input type='text' value='$broj_zatrazenih_poslova' size='20' maxlength='50' readonly/>
+					</td> </tr> ";
+
+					echo "<tr>
+					<td>
+						<label ><strong>Br. odobrenih:</strong></label>
+					</td>
+					<td>
+						<input type='text' value='$broj_odobrenih_poslova' size='20' maxlength='50' readonly/>
+					</td> </tr> ";
+
+					echo "<tr>
+					<td>
+						<label ><strong>Br. završenih:</strong></label>
+					</td>
+					<td>
+						<input type='text' value='$broj_zavrsenih_poslova' size='20' maxlength='50' readonly/>
+					</td> </tr> ";
+
+					echo "<tr>
+					<td>
+						<label ><strong>Br. odbijenih:</strong></label>
+					</td>
+					<td>
+						<input type='text' value='$broj_odbijenih_poslova' size='20' maxlength='50' readonly/>
+					</td> </tr> ";
+
+					$ukupno = $broj_zatrazenih_poslova + $broj_odobrenih_poslova + $broj_zavrsenih_poslova + $broj_odbijenih_poslova;
+					echo "<tr>
+					<td>
+						<label ><strong>Ukupno:</strong></label>
+					</td>
+					<td>
+						<input type='text' value='$ukupno' size='20' maxlength='50' readonly/>
+					</td> </tr> ";
+				}
+			}
+			?>
 			
 			
 		</tbody>
