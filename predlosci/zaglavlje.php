@@ -1,4 +1,10 @@
-<?php	
+<?php
+//ovo nakon završetka maknuti ... samo za razvoj
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+//_____________________________________________
+
 	if(session_id()=="")session_start();
 
 	if(isset($_SESSION['aktivni_korisnik'])){

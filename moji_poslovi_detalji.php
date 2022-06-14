@@ -15,12 +15,63 @@
 
 	$veza=spojiSeNaBazu();
 
+    if(isset($_POST['submit'])){
+        $posao_id=$_SESSION['posao_id'];
+        unset($_SESSION["posao_id"]);
+
+        $datum_vrijeme_kreiranja=$_SESSION["dv_kreiranja"];
+        unset($_SESSION["dv_kreiranja"]);
+        
+        $status_posla=$_POST['status'];
+        $datum_vrijeme_zavrsetka=NULL;
+ 
+        if($status_posla==2) {
+            $datum_vrijeme_zavrsetka=date('Y-m-d H:i:s');
+            $sql="UPDATE posao SET 
+            `status`=$status_posla,
+            datum_vrijeme_kreiranja='$datum_vrijeme_kreiranja',
+            datum_vrijeme_završetka='$datum_vrijeme_zavrsetka'
+            WHERE posao_id=$posao_id
+            ";
+        } else {
+            $sql="UPDATE posao SET 
+            `status`=$status_posla,
+            datum_vrijeme_kreiranja='$datum_vrijeme_kreiranja',
+            datum_vrijeme_završetka=NULL
+            WHERE posao_id=$posao_id
+            ";
+        }
+        izvrsiUpit($veza,$sql);       
+        echo "<script> location.href='moji_poslovi_detalji.php?posao=$posao_id'; </script>";
+        exit();
+	}
+
+    if(isset($_POST['dodaj_sliku'])){
+        $slika_url=$_POST['slika_url'];
+        $posao_id=$_SESSION['posao_id'];
+        unset($_SESSION["posao_id"]);
+        $majstor_id=$_SESSION["aktivni_korisnik_id"];
+        $vrijeme_postavljanja=date("Y-m-d H:i:s");
+       
+        $sql="INSERT INTO slika 
+            (posao_id, slika, datum_vrijeme_postavljanja)
+            VALUES
+			($posao_id, '$slika_url', '$vrijeme_postavljanja');
+            ";
+        izvrsiUpit($veza,$sql);
+        echo "<script> location.href='moji_poslovi_detalji.php?posao=$posao_id'; </script>";
+		exit();
+	}
+
     if(isset($_GET['posao'])){
         //dohvati posao po posao_id ključu
 		$posao_id=$_GET['posao'];
+        $_SESSION["posao_id"]=$posao_id;
 		$sql="SELECT opis, datum_vrijeme_kreiranja, `status`, napomena, datum_vrijeme_završetka FROM posao WHERE posao_id=$posao_id";
 		$rs=izvrsiUpit($veza,$sql);
 		list($opis, $datum_vrijeme_kreiranja, $status, $napomena, $datum_vrijeme_završetka)=mysqli_fetch_array($rs);
+
+        $_SESSION["dv_kreiranja"]=$datum_vrijeme_kreiranja;
 
 
         //formatiranje datuma
@@ -68,6 +119,7 @@
     <body>
 		
 		<h1>Moj posao - detalji</h1>
+        <form method="POST" action="moji_poslovi_detalji.php">
         <table>
 		<tbody>
 			<tr>
@@ -84,7 +136,6 @@
 				</td>
 				<td>
                     <select id="status" name="status">
-                    <option value=0>zatražen</option>
                     <?php
                         $statusi = array("zatražen", "odobren", "završen", "odbijen");
                         for ($i = 0; $i < 4; $i++) {
@@ -121,7 +172,21 @@
 					<label for="dv_zavrsetka"><strong>Datum i vrijeme završetka:</strong></label>
 				</td>
 				<td>
-					<input type="text" name="dv_zavrsetka" value="<?php echo $formatiran_dv_završetka; ?>" size="51" maxlength="50"/>
+					<!-- <input type="text" name="dv_zavrsetka" value="<?php echo $formatiran_dv_završetka; ?>" placeholder="dd.mm.gggg. hh:mm:ss" size="51" maxlength="50" onclick="postaviDatumVrijeme(this)"/> -->
+                    <input type="text" name="dv_zavrsetka" value="<?php echo $formatiran_dv_završetka; ?>" size="51" maxlength="50" disabled/>
+				</td>
+			</tr>
+            <tr>
+				<td colspan="2" style="text-align:right;">
+				<input type="submit" name="submit" value="Spremi promjene"/>
+                </td>
+            </tr>
+            <tr>
+				<td>
+                    <input type="submit" name="dodaj_sliku" value="Dodaj sliku"/>
+				</td>
+				<td>
+					<input type="text" name="slika_url" placeholder="zalijepi link do slike" size="51" maxlength="500"/>
 				</td>
 			</tr>
 
@@ -152,6 +217,7 @@
             ?>
 
 		</table>
+        </form>
 
     </body>
 

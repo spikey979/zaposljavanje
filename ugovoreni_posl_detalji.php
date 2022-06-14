@@ -18,7 +18,6 @@
 		$sql="SELECT majstor_id, opis, datum_vrijeme_kreiranja, `status`, napomena, datum_vrijeme_završetka FROM posao WHERE posao_id=$posao_id";
 		$rs=izvrsiUpit($veza,$sql);
 		list($majstor_id, $opis, $datum_vrijeme_kreiranja, $status, $napomena, $datum_vrijeme_završetka)=mysqli_fetch_array($rs);
-        custom_log("ovo je majstor_id", $majstor_id);
 
         //dohvati majstora po majstor_id ključu
         $sql="SELECT ime, prezime, zanimanje_id FROM korisnik WHERE korisnik_id = $majstor_id";

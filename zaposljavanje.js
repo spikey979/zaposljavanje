@@ -1,9 +1,3 @@
-/* function trenutnaForma(){
-	var trenutnaForma=document.getElementsByTagName("form")[0]["name"];
-	if(typeof(trenutnaForma)=='undefined')return null;
-	return trenutnaForma;
-} */
-
 function validacija(){
 	var greska="";
   var forma=trenutnaForma();
@@ -24,51 +18,20 @@ function validacija(){
 }
 
 function postaviDatum(text){
-  var currentTime=new Date();
-  var month=currentTime.getMonth()+1;
-  var day=currentTime.getDate();
-  var year=currentTime.getFullYear();
-  text.value=day+"."+month+"."+year+".";
+  var vrijeme=new Date();
+  var mjesec=vrijeme.getMonth()+1;
+  var dan=vrijeme.getDate();
+  var godina=vrijeme.getFullYear();
+  text.value=dan+"."+mjesec+"."+godina+".";
 }
 
-/* function sakrijMeni(){
-  var meni=document.getElementById("navigacija");
-  var tekst=document.getElementById("tekst");
-  if(meni.style.visibility==="hidden"){
-    meni.style.visibility="visible";
-		meni.style.display="block";
-    tekst.innerHTML="sakrij meni";
-	}
-	else{
-		meni.style.visibility="hidden";
-		meni.style.display="none";
-		tekst.innerHTML="prikaži meni";
-	}
-} */
-
-/* function poruka() {
-    console.log("ovo je greška");
-} */
-
-/* $(document).ready(function(){
-	
-	$('#btnIzdvojiDarivatelje').click(function () {
-		//console.log("ovo je btnIzdvojiDarivatelje");
-		modalStatusiObavijest(strTitle="Obavijest", 'Budite strpljivi, podaci se učitavaju...')
-		AjGetTblDarivateljiPoKriterijima();
-	});
-
-    $("#chkbxSveAkcije").change(function() {
-		if(this.checked) {
-			AjTraziAktivnuAkciju(sveAkcije="true")
-		} else {
-			//$('#tblDarivatelji').DataTable().clear().draw();
-			AjTraziAktivnuAkciju(sveAkcije="false")
-		}
-
-	});
-
-
-
-}); */
-
+function postaviDatumVrijeme(text){
+	var vrijeme=new Date();
+	var mjesec=vrijeme.getMonth()+1;
+	var dan=vrijeme.getDate();
+	var godina=vrijeme.getFullYear();
+	var sat=vrijeme.getHours();
+	var minute=vrijeme.getMinutes();
+	var sekunde=vrijeme.getSeconds();
+	text.value=dan+"."+mjesec+"."+godina+". "+sat+":"+minute+":"+sekunde;
+  }

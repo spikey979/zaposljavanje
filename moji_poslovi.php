@@ -5,8 +5,6 @@
 
 	if(session_id()=="")session_start();
 
-	custom_log("ovo je aktivni_korisnik_tip", $_SESSION['aktivni_korisnik_tip']);
-
 	if($_SESSION['aktivni_korisnik_tip'] == NULL) {
 		echo "<script> location.href='obavijest.php?poruka=Niste prijavljeni kao korisnik!'; </script>";
 		exit();

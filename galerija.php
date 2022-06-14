@@ -8,13 +8,14 @@
 
 	$veza=spojiSeNaBazu();
 
+	$filter_datum="";
+	$filter_zanimanje_id = 'NULL';
 	if(isset($_POST['submit'])){
 		$filter_zanimanje_id = $_POST["zanimanje"];
         if($filter_zanimanje_id == 0) {
             $filter_zanimanje_id = 'NULL';
         }
 
-		$filter_datum="";
 		if(isset($_POST['od'])&&strlen($_POST['od']>0)){
 			$od = strtotime($_POST['od']);
 			$od=date('Y-m-d H:i:s',$od );
@@ -55,19 +56,19 @@
 
 
 	//prikazuj samo ako je korisnik logiran
-	if($_SESSION['aktivni_korisnik_tip'] != NULL) {
+	if(isset($_SESSION['aktivni_korisnik_tip']) && $_SESSION['aktivni_korisnik_tip'] != NULL) {
 			echo '<form method="POST" action="galerija.php"> <table> <caption><strong>FILTER</strong></caption> <tbody>';
 			echo '<tr>';
 
 			echo '<td><label for="od">Datum od:</label>';
-			echo '<input type="text" placeholder="dd.mm.yyyy." value="';if(isset($_POST['od'])&&!isset($_GET['reset']))echo $_POST['od'];
+			echo '<input type="text" placeholder="dd.mm.gggg." value="';if(isset($_POST['od'])&&!isset($_GET['reset']))echo $_POST['od'];
 			echo '" name="od" id="od" size="10" onclick="postaviDatum(this)"/></td>
 			<td><label for="do">Datum do:</label>';
-			echo '<input type="text" placeholder="dd.mm.yyyy." value="';if(isset($_POST['do'])&&!isset($_GET['reset']))echo $_POST['do'];
+			echo '<input type="text" placeholder="dd.mm.gggg." value="';if(isset($_POST['do'])&&!isset($_GET['reset']))echo $_POST['do'];
 			echo '" name="do" id="do" size="10" onclick="postaviDatum(this)"/></td>';
 
 			echo '<td><label for="tip">Zanimanje:</label></td>';
-			echo '<td> <select id="zanimanje" name="zanimanje"'.$uredi.'>';
+			echo '<td> <select id="zanimanje" name="zanimanje">';
 				$sql="SELECT zanimanje_id, naziv FROM zanimanje ORDER BY naziv ASC";
 				$rs=izvrsiUpit($veza, $sql);
 				if(mysqli_num_rows($rs)==0)$greska="Nema rezultata za postavljeni upit!";
@@ -139,14 +140,14 @@
                         echo"<tr>";						
 						echo'<td>';
 						
-						if($_SESSION['aktivni_korisnik_tip'] != NULL) { //slika je link samo za prijavljenog korisnika... 
+						if(isset($_SESSION['aktivni_korisnik_tip']) && $_SESSION['aktivni_korisnik_tip'] != NULL) { //slika je link samo za prijavljenog korisnika... 
 							echo '<a href="ugovoreni_posl_detalji.php?posao='.$posao_id.'">';
 							
 						}
 
 						echo '<img src='.$slika.' height="400" width="600" >';
 
-						if($_SESSION['aktivni_korisnik_tip'] != NULL) {
+						if(isset($_SESSION['aktivni_korisnik_tip']) && $_SESSION['aktivni_korisnik_tip'] != NULL) {
 							echo '</a>';
 						}
 						echo " </td>";

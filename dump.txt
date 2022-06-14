@@ -1275,3 +1275,387 @@ ovo je aktivni_korisnik_tip
 1
 ovo je aktivni_korisnik_tip
 1
+ovo je majstor_id
+12
+ovo je majstor_id
+12
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+2
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je slika_url
+https://st4.depositphotos.com/12985848/23162/i/160
+ovo je aktivni_korisnik_tip
+1
+ovo je slika_url
+https://st4.depositphotos.com/12985848/23162/i/1600/depositphotos_231623548-stock-photo-side-view-golden-retriever-catching.jpg
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je slika_url
+https://st4.depositphotos.com/12985848/23162/i/1600/depositphotos_231623548-stock-photo-side-view-golden-retriever-catching.jpg
+ovo je aktivni_korisnik_tip
+1
+ovo je slika_url
+https://st4.depositphotos.com/12985848/23162/i/1600/depositphotos_231623548-stock-photo-side-view-golden-retriever-catching.jpg
+ovo je posao_id
+NULL
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je slika_url
+asd
+ovo je posao_id
+NULL
+ovo je post posao_id
+NULL
+ovo je aktivni_korisnik_tip
+1
+ovo je slika_url
+sdfsdffs
+ovo je posao_id
+NULL
+ovo je sesion posao_id
+13
+ovo je aktivni_korisnik_tip
+1
+ovo je slika_url
+sdfsdf
+ovo je posao_id
+13
+ovo je sql
+INSERT INTO slika 
+            (posao_id, slika, datum_vrijeme_postavljanja)
+            VALUES
+			(29, \'asdf\', NULL);
+            
+ovo je aktivni_korisnik_tip
+1
+ovo je sql
+INSERT INTO slika 
+            (posao_id, slika, datum_vrijeme_postavljanja)
+            VALUES
+			(13, \'sdfsdffs\', 2022-06-14 06:48:56);
+            
+ovo je sql
+INSERT INTO slika 
+            (posao_id, slika, datum_vrijeme_postavljanja)
+            VALUES
+			(13, \'kiki\', \'2022-06-14 06:49:56\');
+            
+ovo je sql
+INSERT INTO slika 
+            (posao_id, slika, datum_vrijeme_postavljanja)
+            VALUES
+			(13, \'https://st4.depositphotos.com/12985848/23162/i/1600/depositphotos_231623548-stock-photo-side-view-golden-retriever-catching.jpg\', \'2022-06-14 06:50:32\');
+            
+ovo je status
+2
+ovo je status
+0
+ovo je status
+3
+ovo je status
+0
+ovo je status
+3
+ovo je status
+2
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je status
+0
+ovo je datum_vrijeme_zavrsetka
+
+ovo je status
+0
+ovo je datum_vrijeme_zavrsetka
+NULL
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+NULL
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+1970-01-01 00:00:14
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022. 9:20:52
+ovo je status
+0
+ovo je datum_vrijeme_zavrsetka
+1970-01-01 00:00:14
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022 9:21:23
+ovo je status
+0
+ovo je datum_vrijeme_zavrsetka
+1970-01-01 00:00:14
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022 9:23:41
+ovo je status
+0
+ovo je datum_vrijeme_zavrsetka
+1655198621
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022 9:24:42
+ovo je status
+0
+ovo je datum_vrijeme_zavrsetka
+14/Jun/2022 09:24:42
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022 9:25:19
+ovo je status
+0
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:25:19
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022 9:30:13
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:30:13
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:30:13\',
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022. 9:30:41
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:30:41
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:30:41\',
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022. 9:32:6
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:32:06
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:32:06\'
+        WHERE posao_id=4
+        
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je datum_vrijeme_zavrsetka init
+14.06.2022 09:30:41
+ovo je status
+2
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:30:41
+ovo je sql
+UPDATE posao SET 
+        `status`=2,
+        datum_vrijeme_kreiranja=2021-06-14 09:33:57,
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:30:41\'
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022. 9:38:10
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:38:10
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_kreiranja=2021-06-14 09:33:57,
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:38:10\'
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022. 9:39:2
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:39:02
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_kreiranja=2022-06-14 09:38:56,
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:39:02\'
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022. 9:41:47
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:41:47
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_kreiranja=\'2022-06-14 09:38:56\',
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:41:47\'
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.5.2022. 9:42:15
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-05-14 09:42:15
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_kreiranja=\'2022-06-14 09:38:56\',
+        datum_vrijeme_zavrÅ¡etka=\'2022-05-14 09:42:15\'
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.6.2022. 9:43:15
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:43:15
+ovo je sql
+UPDATE posao SET 
+        `status`=3,
+        datum_vrijeme_kreiranja=\'2021-06-10 09:38:56\',
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:43:15\'
+        WHERE posao_id=4
+        
+ovo je datum_vrijeme_zavrsetka init
+14.06.2022 09:43:15
+ovo je status
+2
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 09:43:15
+ovo je sql
+UPDATE posao SET 
+        `status`=2,
+        datum_vrijeme_kreiranja=\'2021-06-10 09:38:56\',
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 09:43:15\'
+        WHERE posao_id=4
+        
+ovo je aktivni_korisnik_tip
+NULL
+ovo je aktivni_korisnik_tip
+2
+ovo je aktivni_korisnik_tip
+2
+ovo je majstor_id
+71
+ovo je majstor_id
+71
+ovo je majstor_id
+12
+ovo je aktivni_korisnik_tip
+1
+ovo je aktivni_korisnik_tip
+1
+ovo je status
+2
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 08:03:47
+ovo je sql
+UPDATE posao SET 
+        `status`=2,
+        datum_vrijeme_kreiranja=\'2021-10-10 06:35:00\',
+        datum_vrijeme_zavrÅ¡etka=\'2022-06-14 08:03:47\'
+        WHERE posao_id=2
+        
+ovo je status
+1
+ovo je datum_vrijeme_zavrsetka
+NULL
+ovo je sql
+UPDATE posao SET 
+        `status`=1,
+        datum_vrijeme_kreiranja=\'2021-10-10 06:35:00\',
+        datum_vrijeme_zavrÅ¡etka=\'\'
+        WHERE posao_id=2
+        
+ovo je status
+2
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 08:07:09
+ovo je sql
+UPDATE posao SET 
+            `status`=2,
+            datum_vrijeme_kreiranja=\'2021-10-10 06:35:00\',
+            datum_vrijeme_zavrÅ¡etka=\'2022-06-14 08:07:09\'
+            WHERE posao_id=2
+            
+ovo je status
+1
+ovo je datum_vrijeme_zavrsetka
+NULL
+ovo je sql
+UPDATE posao SET 
+            `status`=1,
+            datum_vrijeme_kreiranja=\'2021-10-10 06:35:00\',
+            datum_vrijeme_zavrÅ¡etka=NULL
+            WHERE posao_id=2
+            
+ovo je status
+3
+ovo je datum_vrijeme_zavrsetka
+NULL
+ovo je sql
+UPDATE posao SET 
+            `status`=3,
+            datum_vrijeme_kreiranja=\'2021-10-10 06:35:00\',
+            datum_vrijeme_zavrÅ¡etka=NULL
+            WHERE posao_id=2
+            
+ovo je status
+2
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 08:07:45
+ovo je sql
+UPDATE posao SET 
+            `status`=2,
+            datum_vrijeme_kreiranja=\'2021-10-10 06:35:00\',
+            datum_vrijeme_zavrÅ¡etka=\'2022-06-14 08:07:45\'
+            WHERE posao_id=2
+            
+ovo je status
+2
+ovo je datum_vrijeme_zavrsetka
+2022-06-14 08:08:14
+ovo je sql
+UPDATE posao SET 
+            `status`=2,
+            datum_vrijeme_kreiranja=\'2021-10-10 06:35:00\',
+            datum_vrijeme_zavrÅ¡etka=\'2022-06-14 08:08:14\'
+            WHERE posao_id=2
+            
+ovo je sql
+DELETE FROM korisnik WHERE korisnik_id=71

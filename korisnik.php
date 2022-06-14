@@ -76,7 +76,10 @@
 
     if(isset($_POST['brisi'])){
         $id=$_POST['id'];
+        //SET FOREIGN_KEY_CHECKS=0; -- to disable them
         $sql="DELETE FROM korisnik WHERE korisnik_id=$id";
+        //SET FOREIGN_KEY_CHECKS=1; -- to re-enable them
+        custom_log("ovo je sql", $sql);
         $rs=izvrsiUpit($veza,$sql);
         echo "<script> location.href='korisnici.php'; </script>";
         exit();

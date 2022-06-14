@@ -26,7 +26,6 @@
             VALUES
 			($korisnik_id, $majstor_id, '$opis', NULL, $status, '$napomena', NULL);
             ";
-        //custom_log("ovo je sql", $sql);
         izvrsiUpit($veza,$sql);
         echo "<script> location.href='ugovoreni_posl.php?korisnik=$korisnik_id'; </script>";
 		exit();
